@@ -1,0 +1,36 @@
+<ion-header>
+    <ion-toolbar color="primary">
+        <ion-buttons slot="start">
+          <ion-back-button defaultHref="home"></ion-back-button>
+        </ion-buttons>
+        Profile
+      </ion-toolbar>
+</ion-header>
+  
+<ion-content>
+    
+  <ion-avatar (click)="changePic()" class="profile-image">
+    <img src="{{avatar}}">
+  </ion-avatar>
+
+  <ion-item>
+    <ion-button (click)="openCamera()" class="center-item">
+      <ion-icon name="camera-outline"></ion-icon>
+    </ion-button>
+  </ion-item>
+  
+  <ion-item>
+    <ion-label position="floating">First Name</ion-label>
+    <ion-input type="text" [(ngModel)]="first_name"></ion-input>
+  </ion-item>
+    
+  <ion-item>
+    <ion-label position="floating">Last Name</ion-label>
+    <ion-input type="text" [(ngModel)]="last_name"></ion-input>
+  </ion-item> 
+
+  <ion-item>
+    <ion-label position="floating">Email Address</ion-label>
+    <ion-input type="text" [(ngModel)]="email"></ion-input>
+  </ion-item>
+</ion-content>
